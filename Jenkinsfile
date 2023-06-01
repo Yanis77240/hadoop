@@ -25,14 +25,14 @@ pipeline {
                 '''
             }
         }
-        /*stage('Test') {
+        stage('Test') {
             steps {
                 echo "Testing..."
                 sh '''
                 mvn test -Pnative -DskipTests -Dmaven.javadoc.skip=true --fail-never
                 '''
             }
-        }*/
+        }
         stage("Publish to Nexus Repository Manager") {
             steps {
                 echo "Deploy..."
