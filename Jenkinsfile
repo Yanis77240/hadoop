@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "Testing..."
                 sh '''
-                mvn test -DskipTests -Dmaven.javadoc.skip=true --fail-never
+                mvn test -Dmaven.javadoc.skip=true --fail-never
                 '''
             }
         }
